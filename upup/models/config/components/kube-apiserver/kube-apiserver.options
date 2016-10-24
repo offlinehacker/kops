@@ -13,6 +13,8 @@ KubeAPIServer:
   TLSCertFile: /srv/kubernetes/server.cert
   TLSPrivateKeyFile: /srv/kubernetes/server.key
   TokenAuthFile: /srv/kubernetes/known_tokens.csv
+  AuthorizationPolicyFile: /srv/kubernetes/abac_policy
+  AuthorizationRBACSuperUser: admin
   LogLevel: 2
   AllowPrivileged: true
   Image: {{ Image "kube-apiserver" }}
